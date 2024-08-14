@@ -1,13 +1,15 @@
-{% extends "itreporting/base.html" %} 
+{% extends "itreporting/base.html" %}
 
-{% block content %} 
-
-    <h2>You have now been logged out</h2> 
-
-        <div class="border-top pt-3"> 
-
-            <small class="text-muted"><a class="ml-2" href="{% url 'login' %}">Login</a></small> 
-
-        </div> 
-
+{% block content %}
+<div class="container text-center mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="mb-4">You have successfully logged out</h2>
+        <p class="text-muted">Thank you for using our service. You can log in again or explore other options below.</p>
+        
+        <div class="mt-4">
+            <a class="btn btn-primary mr-2" href="{% url 'login' %}">Login Again</a>
+            <a class="btn btn-secondary mr-2" href="{% url 'home' %}">Go to Homepage</a>
+        </div>
+    </div>
+</div>
 {% endblock content %}

@@ -1,85 +1,95 @@
 body {
-    background: #fafafa;
-    color: #333333;
+    background: #f4f4f9; /* Light, soft background for a clean look */
+    color: #333333; /* Standard dark text color for readability */
     margin-top: 5rem;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
-  
-  ul {
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1a1a1a; /* Darker heading colors for emphasis */
+}
+
+ul {
     margin: 0;
-  }
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
+    padding-left: 20px; /* Standard padding for better list formatting */
+}
+
+.bg-steel {
+    background-color: #627c85; /* Cooler steel color with a subtle blue tint */
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #ffffff; /* Crisp white text for contrast */
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffeb3b; /* Vibrant yellow for a lively hover effect */
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 600; /* Bold for active state */
+}
+
+.content-section {
+    background: #ffffff; /* Clean white background */
+    padding: 20px 30px; /* Ample padding for a balanced layout */
+    border: 1px solid #dcdde1; /* Light border for subtle separation */
+    border-radius: 8px; /* Smooth, rounded corners */
+    margin-bottom: 30px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.article-title {
+    color: #e8ebef; /* Calm, modern blue for titles */
+    font-weight: 600; /* Bolder titles for prominence */
+}
+
+a.article-title:hover {
+    color: #e67e22; /* Bright orange on hover for contrast */
+    text-decoration: underline; /* Underline for clarity */
+}
+
+.article-content {
     white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-svg {
+    line-height: 1.7; /* Comfortable line spacing for readability */
+}
+
+.article-img {
+    height: 80px; /* Slightly larger for better emphasis */
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 50%; /* Rounded images for a modern look */
+}
+
+.article-metadata {
+    padding-bottom: 5px; /* Sufficient padding for spacing */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dcdde1; /* Light, subtle border */
+    color: #95a5a6; /* Soft grey for metadata */
+}
+
+.article-svg {
     width: 25px;
     height: 25px;
     vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
+    fill: #e74c3c; /* Rich red for SVG icons to add warmth */
+}
+
+.account-img {
+    height: 160px; /* Larger profile image for emphasis */
+    width: 160px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Rounded profile images */
+    border: 3px solid #b9d9ee; /* Blue border for definition */
+}
+
+.account-heading {
+    font-size: 2.7rem;
+    color: #34495e; /* Deep, sophisticated blue for profile headings */
+}
+
+.article-metadata a:hover {
+    color: #34495e; /* Darker hover effect to match headings */
+    text-decoration: underline; /* Underline for better visibility */
+}

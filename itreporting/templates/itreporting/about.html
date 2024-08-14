@@ -1,4 +1,45 @@
 {% extends "itreporting/base.html" %}
+
 {% block content %}
-    <h1>Welcome to Student IT Services About page</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="display-4 text-primary">About Student IT Services</h1>
+            <p class="lead text-secondary mt-3">Your partner in navigating the digital landscape of academia.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2 class="text-secondary">Who We Are</h2>
+            <p>Student IT Services is a dedicated team of professionals committed to supporting students in all their technological needs. We understand that technology is a vital part of your academic journey, and our goal is to make sure you have the tools and support you need to succeed.</p>
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-secondary">Our Mission</h2>
+            <p>Our mission is to provide exceptional IT services that enhance the educational experience of our students. We aim to be the first point of contact for any tech-related issues, offering quick and reliable solutions that allow you to focus on your studies.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h2 class="text-secondary">What We Offer</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Comprehensive hardware and software support</li>
+                <li class="list-group-item">Network troubleshooting and connectivity solutions</li>
+                <li class="list-group-item">Guidance on the use of academic software and tools</li>
+                <li class="list-group-item">Assistance with student accounts and email services</li>
+                <li class="list-group-item">Workshops and tutorials on various IT topics</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12 text-center">
+            <h2 class="text-secondary">Get in Touch</h2>
+            <p>If you have any questions or need assistance, don't hesitate to <a href="{% url 'contact' %}" class="text-primary">contact us</a>. We're here to help you make the most of your academic journey.</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mt-3">Contact Us</a>
+        </div>
+    </div>
+</div>
 {% endblock content %}

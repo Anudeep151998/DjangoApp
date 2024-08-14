@@ -1,4 +1,51 @@
 {% extends "itreporting/base.html" %}
+
 {% block content %}
-    <h1>Welcome to Student IT Services Contact page</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="display-4 text-primary">Contact Us</h1>
+            <p class="lead text-secondary mt-3">We’re here to assist you with any IT-related queries or issues.</p>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2 class="text-secondary">Reach Out to Us</h2>
+            <p>If you have any questions or need support, please don’t hesitate to reach out. Our team is ready to help you with all your IT needs.</p>
+            <p><strong>Email:</strong> supportstudentitservices@mail.com</p>
+            <p><strong>Phone:</strong> +44 2323234545</p>
+            <p><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="text-secondary">Send Us a Message</h2>
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="message">Your Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-3">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12 text-center">
+            <h2 class="text-secondary">Visit Our Office</h2>
+            <p>Student IT Services, Building A, Campus Avenue, City, State, ZIP</p>
+            <p><strong>Note:</strong> Please call ahead to schedule an appointment.</p>
+        </div>
+    </div>
+</div>
 {% endblock content %}

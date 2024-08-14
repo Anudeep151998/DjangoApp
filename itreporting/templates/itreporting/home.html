@@ -1,4 +1,35 @@
 {% extends "itreporting/base.html" %}
+
 {% block content %}
-    <h1>Welcome to Student IT Services</h1>
+<div class="container mt-5">
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-primary">
+        <div class="col-md-8 px-0">
+            <h1 class="display-4">Welcome to Student IT Services</h1>
+            <p class="lead my-3">We are here to help you with all your IT-related needs and ensure a smooth academic journey.</p>
+            <p class="lead mb-0"><a href="{% url 'contact' %}" class="text-white font-weight-bold">Get in touch with us</a></p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2 class="text-secondary">Why Choose Us?</h2>
+            <p>Our team of experts is dedicated to providing top-notch IT support to help you succeed. Whether it's hardware troubleshooting or software installation, we're here to assist you.</p>
+        </div>
+        <div class="col-md-6">
+            <h2 class="text-secondary">Our Services</h2>
+            <ul class="list-unstyled">
+                <li><strong>Hardware Support:</strong> Assistance with any device-related issues.</li>
+                <li><strong>Software Installation:</strong> Help with installing and configuring software.</li>
+                <li><strong>Network Troubleshooting:</strong> Solutions for connectivity problems.</li>
+                <li><strong>Account Management:</strong> Support for email and other student accounts.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="{% url 'report' %}" class="btn btn-primary btn-lg">Report an Issue</a>
+        </div>
+    </div>
+</div>
 {% endblock content %}
