@@ -22,7 +22,6 @@ def register(request):
     return render(request, 'users/register.html', {'form': form, 'title': 'Student Registration'})
 
 @require_http_methods(['GET', 'POST'])
-
 def profile(request):
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)

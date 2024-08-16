@@ -19,7 +19,6 @@ def contact(request):
     return render(request, 'itreporting/contact.html')
 
 def report(request):
-    # Get all reported issues
     issues = Issue.objects.all()
     context = {'issues': issues, 'title': 'Issues Reported'}
     return render(request, 'itreporting/report.html', context)
@@ -29,13 +28,13 @@ class PostListView(ListView):
     ordering = ['-date_submitted']
     template_name = 'itreporting/report.html'
     context_object_name = 'issues'
-    paginate_by = 10  # Optional pagination
+    paginate_by = 10
 
 class UserPostListView(ListView):
     model = Issue
     template_name = 'itreporting/user_issues.html'
     context_object_name = 'issues'
-    paginate_by = 5  # Optional pagination
+    paginate_by = 5
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
@@ -63,16 +62,14 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Issue
-    success_url = reverse_lazy('issue-list')  # Use reverse_lazy for URL resolution
-    template_name = 'itreporting/issue_confirm_delete.html'  # Optional: Specify the template to use for the confirmation page
+    success_url = reverse_lazy('issue-list')
+    template_name = 'itreporting/issue_confirm_delete.html'
 
     def test_func(self):
-        """Ensure that only the author of the issue can delete it."""
         issue = self.get_object()
         return self.request.user == issue.author
 
     def handle_no_permission(self):
-        """Override the default behavior when the user does not have permission."""
         if self.request.user.is_authenticated:
             raise PermissionDenied
         return super().handle_no_permission()
