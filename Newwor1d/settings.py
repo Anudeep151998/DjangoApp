@@ -12,8 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
-import django_heroku
+#import dj_database_url
+
+#import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3OKQZ36nOkkJy-lbfqXvRjRPjSUNMcDF5dm-ii6oOeV4biA_TyZpINKwMGTYEydzdDE'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['fathomless-hamlet-56256.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 
@@ -152,4 +153,4 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
