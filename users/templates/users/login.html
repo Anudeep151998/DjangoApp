@@ -7,33 +7,28 @@
 <div class="content-section"> 
 
     <form method="POST"> 
-
         {% csrf_token %} 
-
         <fieldset class="form-group"> 
-
             <legend class="border-bottom mb-4">Student IT Services - Login</legend> 
-
-            {{ form|crispy}} 
-
+            {{ form|crispy }} 
         </fieldset> 
-
         <div class="form-group"> 
-
             <button class="btn btn-outline-info" type="submit">Login</button> 
-
         </div> 
-
     </form> 
 
     <div class="border-top pt-3"> 
-
         <small class="text-muted"> 
-
-        You need to create an account?<a class="ml-2" href="{% url 'login' %}">Login</a> 
-
+            You need to create an account?
+            <a class="btn btn-outline-secondary ml-2" href="{% url 'register' %}">Register</a>
         </small> 
+    </div> 
 
+    <div class="border-top pt-3"> 
+        <small class="text-muted"> 
+            Already have an account?
+            <a class="ml-2" href="{% url 'login' %}">Login</a>
+        </small> 
     </div> 
 
 </div> 
